@@ -8,4 +8,16 @@ before_install:
 script:
   - docker run -e CI=true alejandro/docker-react npm run test
 
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  region: "us-west-2"
+  app: "Momstm Cron"
+  env: "Momstmcron-env"
+  bucket_name: "elasticbeanstalk-us-west-2-247813293886"
+  bucket_path: "Momstm Cron"
+  on:
+    branch: master
+
 language: generic
