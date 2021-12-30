@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          <b>Ready for production</b>
+          <b>Ready for production and deployment on elastic beanstalk AWS</b>
         </p>
         <a
           className="App-link"
